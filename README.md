@@ -63,3 +63,16 @@ The **Power BI dashboard** allows:
 ---
 
 ## 📂 Project Structure
+jee-seat-predictor/
+-│── data/ # datasets or sample data
+-│── dashboard/ # Power BI files (.pbix)
+-│── requirements.txt # Python dependencies
+-│── README.md # Project documentation
+
+---
+
+## ⭐ Acknowledgements
+
+- Official JoSAA Data Sources
+
+- Python & Power BI Community
