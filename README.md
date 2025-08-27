@@ -1,7 +1,7 @@
 # 🎓 JEE Counseling Seat Predictor
 
 An **interactive tool** to help JEE aspirants make informed decisions during JoSAA counseling.  
-It predicts the availability of college programs based on the aspirant’s rank, applying data cleaning, web scraping, and classification logic, and visualizing results with **Power BI**.
+It predicts the availability of college programs based on the aspirant’s rank, applying **data cleaning**, **web scraping**, **linear regression for score predictions**, and **classification logic**, while visualizing results with **Power BI**.
 
 ---
 
@@ -12,9 +12,10 @@ It predicts the availability of college programs based on the aspirant’s rank,
   - **High Chances** – comfortably above the cutoff.  
   - **Easy to Get** – much safer margin.  
   - **Very Tough** – unlikely.  
-- ✅ Filters for **College Name**, **Tier**, and **Generation**.  
+- ✅ Filters for **College Name**, **Tier**, and **Gender**.  
 - ✅ Cleaned and structured **closing rank data** via Pandas.  
 - ✅ Web scraping of official data using **BeautifulSoup**.  
+- ✅ **Linear Regression model** to estimate scores from ranks and predict availability.  
 - ✅ Rich and interactive **Power BI dashboard**.
 
 ---
@@ -22,6 +23,9 @@ It predicts the availability of college programs based on the aspirant’s rank,
 ## 📊 Data Processing
 - **Web Scraping**: Collected closing rank data from official sources using `BeautifulSoup`.  
 - **Data Cleaning**: Handled missing values, normalized formats, and split text columns with `Pandas`.  
+- **Regression Modeling**:  
+  - Applied **Linear Regression** to map **JEE scores ↔ ranks** for predictive insights.  
+  - Helps estimate the likelihood of achieving a certain rank/college based on score trends.  
 - **Logic Applied**: Rank relaxation logic based on student rank bands:
 
 | Rank Range         | Relaxation (Seats) |
@@ -39,6 +43,7 @@ The **Power BI dashboard** allows:
 - Filtering by **College / Tier**  
 - Viewing **chance classification**  
 - Insights into **available programs**  
+- Score vs Rank regression line visualization  
 
 ![Dashboard Preview](dashboard/preview.png)  
 *(Add screenshot of your Power BI dashboard here)*
@@ -46,8 +51,8 @@ The **Power BI dashboard** allows:
 ---
 
 ## 🛠️ Tech Stack
-- **Python**: Data collection & cleaning  
-  - `pandas`, `numpy`, `beautifulsoup4`  
+- **Python**: Data collection, cleaning & modeling  
+  - `pandas`, `numpy`, `beautifulsoup4`, `scikit-learn`  
 - **Power BI**: Data visualization & interactive dashboard  
 - **GitHub**: Version control & project sharing  
 
